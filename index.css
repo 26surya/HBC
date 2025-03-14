@@ -305,7 +305,7 @@ html {
 .floating-image1 {
     position: absolute;
     top: 78%;
-    left: 10%;
+    left: 120px;
     width: 250px;
     animation: float1 3s infinite ease-in-out;
 }
@@ -313,7 +313,7 @@ html {
 .floating-image5 {
     position: absolute;
     top: 80%;
-    right: 10%;
+    right: 120px;
     width: 250px;
     animation: float1 3s infinite ease-in-out;
 }
