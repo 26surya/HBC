@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HBC - Game Over</title>
     <link rel="icon" type="image/png" href="title.png">
+    <title>HBC</title>
     <link rel="stylesheet" href="gameover.css">
+
 </head>
 <body>
+    
 
+    <section id="home">
+    </section>
     <header>
         <nav class="navbar">
             <div class="logo">
@@ -27,7 +29,7 @@
     
     <main>
         <div class="video-container">
-            <video id="gameoverVideo" autoplay muted playsinline>
+            <video id="gameoverVideo" autoplay>
                 <source src="gameover.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
@@ -41,39 +43,40 @@
         document.addEventListener("DOMContentLoaded", function () {
             var video = document.getElementById("gameoverVideo");
             var restartButton = document.getElementById("restartButton");
-
-            // Ensure autoplay works on most browsers
-            video.muted = true; 
-            video.play().catch(() => {
-                console.log("Autoplay blocked. Retrying...");
-                setTimeout(() => video.play(), 500); // Retry after 500ms
+    
+            // Try to play video immediately (some browsers might block it)
+            video.play().catch(function () {
+                // If autoplay fails, wait for the first interaction
+                document.addEventListener("click", function () {
+                    video.muted = false; // Unmute after interaction
+                    video.play();
+                }, { once: true }); // Ensures it runs only once
             });
-
-            // Unmute on first user interaction
-            document.addEventListener("click", function unmuteVideo() {
-                video.muted = false; 
-                video.play();
-                document.removeEventListener("click", unmuteVideo);
-            });
-
-            // Show restart button when video ends
+    
+            // When video ends, show the restart button
             video.onended = function () {
                 restartButton.style.display = "block";
             };
         });
-
+    
+        // Function to restart the game
         function restartGame() {
             window.location.href = "index.html";
         }
     </script>
-
+    
+    
+    
+    <hr>
     <footer class="HBC-footer">
         <div class="footer-container">
+            <!-- Left Section: About the Game -->
             <div class="footer-about">
                 <h3>About HBC</h3>
-                <p>Hum Banayenge Crorepati is a fun quiz game where you don't require knowledge to achieve excellence! Play and challenge your friends to become the ultimate champion.</p>
+                <p>Hum Banayenge Crorepati is a fun quiz game where you don't require knowledge to acheive excelence! Play and challenge your friends, and become the ultimate champion.</p>
             </div>
-
+    
+            <!-- Middle Section: Quick Links -->
             <div class="footer-links">
                 <h3>Quick Links</h3>
                 <ul>
@@ -84,15 +87,17 @@
                     <li><a href="rules.html" target="_blank">⚖️ Rules</a></li>
                 </ul>
             </div>
-
+    
+            <!-- Right Section: Contact & Social Media -->
             <div class="footer-contact">
                 <h3>Contact Us</h3>
-                <p>📍 Location: Malad, India</p>
-                <p style="color:white;">📧 Email: <a href="mailto:fungame.hbc@gmail.com">fungame.hbc@gmail.com</a></p>
+                <p>📍 Location: Malad,India</p>
+                <p>📧 Email: <a class="mail"href="mailto:fungame.hbc@gmail.com">fungame.hbc@gmail.com</a></p>
                 <p>📞 Phone: +91 95652 07725</p>
+                <br>
                 <h3>Follow Us</h3>
                 <div class="social-icons">
-                    <a href="https://www.facebook.com/share/v/1BHsf1YV8A/" target="_blank">
+                    <a href="https://www.facebook.com/share/v/1BHsf1YV8A/" target="_blank ">
                         <img src="fb.jpg" alt="Facebook">
                     </a>
                     <a href="https://x.com/i/status/1891751958706356245" target="_blank">
@@ -102,12 +107,13 @@
                         <img src="insta.png" alt="Instagram">
                     </a>
                     <a href="https://youtu.be/wsAWRCDZOJ8" target="_blank">
-                        <img src="yt.png" alt="YouTube">
+                        <img src="yt.png" alt="YouTube" align="left">
                     </a>
                 </div>
             </div>
         </div>
-
+    
+        <!-- Bottom Section -->
         <div class="footer-bottom">
             <p>© 2025 HBC Official Website | Presented by Suraj and Arpit | All Rights Reserved.</p>
             <p>Made with ❤️ for Marks</p>
