@@ -1,0 +1,246 @@
+/* General Page Styling */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #121212;
+    color: #f8f8f8;
+}
+
+/* Header Styling */
+header {
+    background: black;
+    padding: 10px 0;
+    box-shadow: 0 4px 10px rgba(255, 215, 0, 0.2);
+    text-align: center;
+}
+
+/* header p {
+    font-size: 18px;
+    color: gold;
+    margin: 5px 0;
+} */
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 70px;
+    margin-right: 10px;
+}
+
+.logo span a{
+    font-size: 22px;
+    font-weight: bold;
+    color: gold;
+    text-decoration: none;
+}
+
+.logo h2{
+    padding-left: 40px;
+ }
+
+/* Navbar Styling */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+.navbar .logo span a {
+    font-size: 28px;
+    font-weight: bold;
+    color: gold;
+    text-decoration: none;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    padding: 8px 15px;
+    transition: 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: gold;
+    transform: scale(1.1);
+}
+.login-btn {
+    background-color: gold;
+    color: black;
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: 0.3s ease;
+}
+
+.login-btn:hover {
+    background-color: darkorange;
+    transform: scale(1.1);
+}
+
+/* Privacy Policy Section */
+#privacy {
+    max-width: 900px;
+    margin: 60px auto;
+    padding: 40px;
+    background: rgba(15, 15, 15, 0.95);
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.4);
+    text-align: left;
+}
+
+/* Headings */
+#privacy h1 {
+    color: gold;
+    font-size: 38px;
+    text-align: center;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+#privacy h2 {
+    color: gold;
+    font-size: 26px;
+    margin-top: 25px;
+    border-bottom: 2px solid gold;
+    padding-bottom: 8px;
+}
+
+/* Paragraphs */
+#privacy p {
+    font-size: 18px;
+    line-height: 1.7;
+    margin-bottom: 18px;
+    text-align: justify;
+    /* border-bottom: 2px solid gold; */
+
+}
+
+/* List Styling */
+#privacy ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+#privacy ul li {
+    font-size: 18px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 6px;
+    position: relative;
+    padding-left: 40px;
+    /* transition: */
+}
+
+#mail{
+    color: white;
+    text-decoration: none;
+}
+
+.HBC-footer {
+    background: rgb(10, 10, 10);
+    color: white;
+    /* padding: 40px 0; */
+    text-align: center;
+    font-size: 16px;
+    margin-top: auto; 
+}
+
+.mail{
+        text-decoration: none;
+        color: white;
+}
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+
+.footer-container h3 {
+    color: gold;
+    margin-bottom: 10px;
+    font-size: 25px;
+}
+
+.footer-about, .footer-links, .footer-contact {
+    width: 30%;
+    min-width: 250px;
+    text-align: left;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links ul li {
+    margin: 5px 0;
+}
+
+.footer-links ul li a {
+    text-decoration: none;
+    color: white;
+    transition: 0.3s;
+}
+
+.footer-links ul li a:hover {
+    color: gold;
+}
+
+.social-icons {
+margin-top: 10px;
+}
+
+.social-icons a {
+display: inline-block;
+margin: 5px;
+}
+
+.social-icons img {
+width: 30px;
+transition: transform 0.3s ease-in-out;
+}
+
+.social-icons img:hover {
+transform: scale(1.2);
+}
+
+.footer-bottom {
+    margin-top: 20px;
+    padding-top: 10px;
+    /* margin-bottom: 20px; */
+    padding-bottom: 40px;
+    border-top: 1px solid #444;
+    font-size: 14px;
+}

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" type="image/png" href="title.png">
+    <title>HBC Registration</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <div class="form-container">
+        <h2>HBC Registration Form</h2>
+        <br>
+
+        <form action="Q1.html">
+            <hr>
+            <h3>Personal Details</h3>
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" placeholder="Enter Full Name" required>
+
+            <label for="dob">Date of Birth</label>
+            <input type="date" id="dob" name="dob" required>
+
+            <label>Gender</label>
+            <div>
+                <input type="radio" id="male" name="gender" value="Male" required>
+                <label for="male">Male</label>
+                <input type="radio" id="female" name="gender" value="Female" required>
+                <label for="female">Female</label>
+                <input type="radio" id="other" name="gender" value="Other" required>
+                <label for="other">Other</label>
+            </div>
+
+            <label for="address">Address:</label> <br>
+            <textarea cols="51" id="address" name="address" placeholder="Enter Address" required></textarea>
+            <br>
+
+            <label for="contact">Contact Number</label>
+            <input type="tel" id="contact" name="contact" placeholder="Enter Contact Number" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Enter Email" required>
+
+            <hr>
+            <h3>ID Proof</h3>
+            <label for="idProof">Select ID Proof</label>
+            <select id="idProof" name="idProof" required>
+                <option value="" disabled selected>Select</option>
+                <option value="Aadhaar">Aadhaar</option>
+                <option value="PAN">PAN</option>
+                <option value="Voter ID">Voter ID</option>
+            </select>
+
+            <label for="photo">Upload Photo</label>
+            <input type="file" id="photo" name="photo" accept="image/*" required>
+
+            <hr>
+            <h3>Education & Occupation</h3>
+            <label for="qualification">Highest Qualification</label>
+            <input type="text" id="qualification" name="qualification" placeholder="Enter Qualification" required>
+
+            <label for="occupation">Job Status</label>
+            <input type="text" id="occupation" name="occupation" placeholder="Enter Job Status" required>
+
+            <hr>
+            <h3>HBC Interest</h3>
+            <label for="previousParticipation">Have you participated before?</label>
+            <select id="previousParticipation" name="previousParticipation" required>
+                <option value="" selected disabled>Select</option>
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+            </select>
+
+            <label for="motivation">Why do you want to participate?</label> <br>
+            <textarea  cols="51" id="motivation" name="motivation" placeholder="Enter Motivation" required></textarea>
+
+            <label for="gkHabits">How do you enhance your General Knowledge?</label> <br>
+            <textarea  cols="51" id="gkHabits" name="gkHabits" placeholder="Describe Your GK Habits" required></textarea>
+
+            <hr>
+            <h3>Emergency Contact</h3>
+            <label for="emergencyName">Emergency Contact Name</label>
+            <input type="text" id="emergencyName" name="emergencyName" placeholder="Enter Name" required>
+
+            <label for="relationship">Relationship</label>
+            <input type="text" id="relationship" name="relationship" placeholder="Enter Relationship" required>
+
+            <label for="emergencyPhone">Emergency Contact Number</label>
+            <input type="tel" id="emergencyPhone" name="emergencyPhone" placeholder="Enter Phone" required>
+
+            <hr>
+            <h3>Consent</h3>
+            <input type="checkbox" id="infoAccuracy" name="infoAccuracy" required>
+            <label for="infoAccuracy">I confirm that the information provided is 
+                <br>
+                accurate.</label>
+            <br>
+
+            <input type="checkbox" id="gameRules" name="gameRules" required>
+            <label for="gameRules" class="consent-label">
+                <a href="rules.html" target="_blank">I have read and understood the Rules of the
+                    <br>
+                    game</a>.
+            </label>
+            <br>
+           
+            <input type="checkbox" id="termsConditions" name="termsConditions" required>
+            <label for="termsConditions" class="consent-label">
+                <a href="privacy.html" target="_blank">I agree with the Privacy Policy</a>.
+            </label>
+            <br>
+            
+            <br>
+            <div class="buttons">
+                <input type="submit" value="Register">
+                <input type="reset" value="Reset">
+            </div>
+        </form>
+    </div>
+</body>
+</html>

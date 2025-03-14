@@ -1,0 +1,240 @@
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+    }
+
+    body {
+        background: #0A0A0A;
+        color: white;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        padding: 20px;
+        position: relative;
+    }
+
+.logo-title {
+    display: flex;
+    align-items: center;  
+    justify-content: center;
+    margin-bottom: -21px;
+}
+
+.logo-title img {
+    width: 70px; 
+    height: auto;
+    margin-right: 15px;
+}
+
+.logo-title h1 {
+    color: gold;
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.timer-box {
+    position: absolute;
+    top: -38px; /* Moves above the quiz box */
+    left: 50%;
+    transform: translateX(-50%);
+    background: #ffcc00;
+    color: black;
+    font-size: 22px;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 50%;
+    border: 3px solid gold;
+    box-shadow: 0 0 10px rgba(255, 215, 0, 0.8);
+    height: 100px;
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    justify-content: flex-start;
+    z-index: -1000;
+}
+
+
+
+.quiz-container {
+        position: absolute;
+        top: 32%;
+        left: 18.7%;
+        width: 70%;
+        height: 245px;
+        max-width: 800px;
+        padding: 20px;
+        text-align: center;
+        background: #222;
+        border-radius: 10px;
+        box-shadow: 0 0 20px rgba(255, 215, 0, 0.7);
+}
+
+.question-box {
+        background: #004d99;
+        padding: 15px;
+        font-size: 24px;
+        font-weight: bold;
+        border-radius: 10px;
+        margin-bottom: 20px;
+        border: 3px solid gold;
+}
+
+    .options {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+    }
+
+    .option {
+        display: flex;
+        align-items: center;
+        justify-content: left;
+        position: relative;
+        background:#013569;
+        padding: 12px;
+        font-size: 20px;
+        border-radius: 8px;
+        border: 2px solid #555;
+        cursor: pointer;
+        transition: 0.3s ease-in-out;
+        border: 2px solid gold;
+
+    }
+
+    /* Style for A, B, C, D */
+    .option::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 10px;
+        font-size: 20px;
+        font-weight: bold;
+        color: #ffcc00;
+    }
+
+    /* Align text properly */
+    .option span {
+        flex-grow: 1;
+        text-align: center;
+    }
+
+    .option:hover {
+        background: #ffcc00;
+        color: black;
+        font-weight : bolder;
+        border-color: #ffcc00;
+    }
+
+    #hintButton {
+        position: absolute;
+        top: 100%;
+        left: 100%;
+        padding: 8px 15px;
+        background-color: #4B0082;
+        box-shadow: 0 0 25px rgba(255, 215, 0, 0.8), 0 0 50px rgba(75, 0, 130, 0.6);
+        border: none;
+        cursor: pointer;
+        font-size: 16px;
+        border-radius: 8px;
+        font-weight: bolder;
+        transition: 0.2s ease-in-out;
+    }
+    
+    #hintButton:hover {
+        background-color: #ffdd44;
+        transform: scale(1.1);
+    }
+    
+    .option.highlight {
+        background-color: #00BFFF;
+        transition: background-color 0.2s ease-in-out;
+        color: black;
+        font-weight: bolder;
+    }
+    
+    
+
+    /* Prize Ladder (Vertical) */
+    .prize-container {
+        position: absolute;
+        top: 7%;
+        right: 10px;
+        background: rgba(0, 0, 0, 0.7);
+        padding: 10px;
+        border-radius: 8px;
+        box-shadow: 0 0 5px rgba(255, 215, 0, 0.7);
+    }
+
+    .prize-list {
+        list-style: none;
+        text-align: center;
+        font-size: 16px;
+    }
+
+    .prize-list li {
+        background: #222;
+        padding: 8px;
+        margin: 5px 0;
+        border-radius: 8px;
+        border: 1px solid #555;
+        transition: 0.3s ease-in-out;
+    }
+
+    .prize-list .active {
+        background: #ffcc00;
+        color: black;
+        font-weight: bold;
+        border: 2px solid #ffcc00;
+    }
+
+    #quitButton {
+        display: block;
+        margin: 8% 45.15%; 
+        padding: 10px 20px;
+        font-size: 18px;
+        background-color: #ff4444; 
+        color: white;
+        font-weight: bold;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        box-shadow: 0 0 10px rgba(255, 0, 0, 0.7);
+        transition: 0.3s ease-in-out;
+    }
+
+    #quitButton:hover {
+        background-color: #cc0000;
+        box-shadow: 0 0 15px rgba(255, 0, 0, 1);
+        font-weight: bolder;
+        transform: scale(1.02);
+    }
+
+    #lockButton {
+        background-color: #FF4500; /* 
+        color: white;
+        padding: 12px 25px;
+        border: none;
+        cursor: pointer;
+        font-size: 20px;
+        font-weight: bolder;
+        border-radius: 5px;
+        position: absolute;
+        top: 80%;
+        left: 70%;
+        transform: translateX(-50%);
+        display: none; /* Hidden initially */
+    }
+    
+    #lockButton:hover {
+        background-color: #ff6347;
+    }
+    
+    .selected {
+        background-color: #FFD700; /* Gold color for selected option */
+        border: 2px solid #FF4500; /* Orange border */
+    }
+    

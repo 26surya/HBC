@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" type="image/png" href="title.png">
+    <title>HBC Quiz</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script> 
+    <link rel="stylesheet" href="Q.css">
+</head>
+<body>
+
+    <audio id="bgMusic" autoplay>
+        <source src="2nd Question.mp3" type="audio/mpeg">
+    </audio>
+
+    <div class="logo-title">
+        <img src="QHBClogo.png" alt="HBC Logo">
+        <h1>Ham Banayenge Crorepati</h1>
+    </div>
+
+    <div class="quiz-container">
+        <div class="question-box" id="question">
+            2. How many hours are there in three days?
+        </div>
+        <div class="options">
+            <div class="option incorrect" data-label="A" onclick="selectOption(this, 'A')"><span>24</span></div>
+            <div class="option incorrect" data-label="B" onclick="selectOption(this, 'B')"><span>36</span></div>
+            <div class="option incorrect" data-label="C" onclick="selectOption(this, 'C')"><span>48</span></div>
+            <div class="option correct" data-label="D" onclick="selectOption(this, 'D')"><span>72</span></div>
+        </div>
+
+        <button id="hintButton">✨</button>
+
+        <button id="quitButton" onclick="quitGame()">Quit</button>
+
+    </div>
+
+    <div class="prize-container">
+        <h3> Prize ladder </h3>
+        <ul class="prize-list" id="prizeList"></ul>
+    </div>
+
+    <script src="Q2.js"></script>
+</body>
+</html>

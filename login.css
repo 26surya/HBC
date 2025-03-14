@@ -1,0 +1,138 @@
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    margin: 1%;
+
+    background: linear-gradient(45deg, #009FFD, #136EB5, #5E9EA0, #FFD700,
+     #D4AF37);
+    animation: gradientAnimation 8s infinite linear alternate;
+    background-size: 400% 400%;
+}
+
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.form-container {
+    background-color: #1c1c1c;
+    color: #FFD700;
+    padding: 20px;
+    border-radius: 10px;
+    width: 400px;
+    /* height: 850px; */
+    height: fit-content;
+}
+
+h2 {
+    margin-bottom: -20px;
+    text-align: left;
+    margin-top: 0px;
+    color: #ffa600;
+    font-size: 35px;
+    text-align: center;
+}
+
+h3 {
+    margin-bottom: 20px;
+    text-align: left;
+    /* margin-top: 0px; */
+    padding-top: 2px;
+    color: #F2A007;
+    font-size: 30px;
+    text-align: center;
+}
+
+label {
+    display: inline-block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+#male {
+    padding: 0px;
+    margin-top: 5px;
+    margin-bottom: 0px;
+    display: inline-block;
+}
+
+#female {
+    padding: 0px;
+    margin-top: 5px;
+    margin-bottom: 0px;
+    display: inline-block;
+}
+
+#others {
+    padding: 0px;
+    margin-top: 5px;
+    margin-bottom: 7px;
+    display: inline-block;
+}
+
+#photo{
+    /* margin: 2px; */
+    margin-left: -6px;
+}
+
+input, select {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+input[type="radio"] {
+    width: auto;
+    margin: 0 10px 0 5px;
+}
+
+input[type="checkbox"] {
+    width: auto;
+    margin-right: 5px;
+}
+
+a{
+    text-decoration: none;
+    color: #FFD700;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.buttons {
+    text-align: center;
+}
+
+.buttons input {
+    width: 48%;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 5px;
+}
+
+.buttons input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.buttons input[type="reset"] {
+    background-color: #FF4F4F;
+    color: white;
+    padding-bottom: 15px;
+}
+
+html {
+    scroll-behavior: smooth;
+}

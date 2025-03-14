@@ -1,0 +1,102 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background: radial-gradient(circle, #111, #000);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
+
+/* Main Content Box */
+.content {
+    background: rgba(255, 215, 0, 0.1);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 15px rgba(255, 215, 0, 0.5);
+    text-align: center;
+    backdrop-filter: blur(10px);
+}
+
+/* Logo & Tagline */
+.logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin: 15px;
+}
+
+.logo {
+    width: 120px;
+}
+
+.tagline {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: gold;
+    text-transform: uppercase;
+}
+
+/* Heading */
+h1 {
+    font-size: 3em;
+    color: gold;
+    margin-bottom: 20px;
+}
+
+/* Winning Amount Display */
+.winning-amount {
+    font-size: 2.8em;
+    font-weight: bold;
+    color: #FFD700;
+    background: rgba(255, 215, 0, 0.2);
+    padding: 15px 30px;
+    border-radius: 10px;
+    margin: 20px auto;
+    box-shadow: 0px 0px 15px rgba(255, 215, 0, 0.5);
+}
+
+/* Buttons */
+.claim-btn, .close-btn {
+    display: inline-block;
+    padding: 12px 25px;
+    font-size: 1.3em;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    border: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin: 10px;
+}
+
+/* Claim Button */
+.claim-btn {
+    background: gold;
+    color: black;
+    box-shadow: 0px 5px 10px rgba(255, 215, 0, 0.4);
+}
+
+.claim-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 8px 20px rgba(255, 215, 0, 0.6);
+}
+
+/* Close Button */
+.close-btn {
+    background: red;
+    color: white;
+    box-shadow: 0px 5px 10px rgba(255, 0, 0, 0.4);
+}
+
+.close-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 8px 20px rgba(255, 0, 0, 0.6);
+}
