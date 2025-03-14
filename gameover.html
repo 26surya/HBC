@@ -39,25 +39,35 @@
         <button id="restartButton" onclick="restartGame()">🔄 RESTART</button>
     </main>
     
-   <script>
+  <script>
     document.addEventListener("DOMContentLoaded", function () {
         var video = document.getElementById("gameoverVideo");
         var restartButton = document.getElementById("restartButton");
 
-        // Try to play video immediately (some browsers might block it)
-        video.play().catch(function () {
-            // If autoplay fails, wait for the first interaction
-            document.addEventListener("click", function () {
+        // Ensure autoplay works on most browsers
+        video.muted = true; 
+        video.play().then(() => {
+            console.log("Video autoplayed successfully.");
+        }).catch(() => {
+            console.log("Autoplay blocked. Waiting for user interaction.");
+            document.addEventListener("click", function playVideo() {
                 video.muted = false; // Unmute after interaction
                 video.play();
-            }, { once: true }); // Ensures it runs only once
+                document.removeEventListener("click", playVideo); // Ensure it runs only once
+            });
         });
 
-        // When video ends, show the restart button
+        // Show restart button when video ends
         video.onended = function () {
             restartButton.style.display = "block";
         };
     });
+
+    function restartGame() {
+        window.location.href = "index.html";
+    }
+</script>
+
 
     // Function to restart the game
     function restartGame() {
