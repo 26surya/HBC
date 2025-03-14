@@ -45,7 +45,6 @@
         var restartButton = document.getElementById("restartButton");
 
         // Try to play video immediately (some browsers might block it)
-        video.muted = true; // Ensure autoplay works on most browsers
         video.play().catch(function () {
             // If autoplay fails, wait for the first interaction
             document.addEventListener("click", function () {
