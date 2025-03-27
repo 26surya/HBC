@@ -11,7 +11,7 @@ const questions = [
 
 let currentQuestion = prizes.length - 5; // Start at ₹1,000 (last index)
 let currentQuestionIndex = 0; // Tracks current question in the questions array
-let countdown = 5; // Timer in seconds
+let countdown = 45; // Timer in seconds
 let timerInterval;
 
 updatePrizeList();
