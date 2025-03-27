@@ -48,7 +48,7 @@
             video.play().catch(function () {
                 // If autoplay fails, wait for the first interaction
                 document.addEventListener("click", function () {
-                    video.muted = false; // Unmute after interaction
+                    video.muted = true; // Unmute after interaction
                     video.play();
                 }, { once: true }); // Ensures it runs only once
             });
