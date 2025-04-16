@@ -1,20 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <link rel="icon" type="image/png" href="title.png">
     <title>HBC</title>
     <link rel="stylesheet" href="gameover.css">
-
 </head>
-<body>
-    
 
-    <section id="home">
-    </section>
+<body>
+
+    <section id="home"></section>
     <header>
         <nav class="navbar">
             <div class="logo">
-                <img src="HBClogo.png" alt="HBC Logo"> 
+                <img src="HBClogo.png" alt="HBC Logo">
                 <span><a href="index.html">HBC</a></span>
             </div>
             <ul class="nav-links">
@@ -26,57 +25,62 @@
             </ul>
         </nav>
     </header>
-    
+
     <main>
         <div class="video-container">
-            <video id="gameoverVideo" autoplay>
+            <video id="gameoverVideo" autoplay muted loop>
                 <source src="gameover.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
-        </div>   
-    
-        <!-- Restart Button (Initially Hidden) -->
+        </div>
+
         <button id="restartButton" onclick="restartGame()">🔄 RESTART</button>
     </main>
-    
+
     <script>
-        document.addEventListener("DOMContentLoaded", function () {
+        document.addEventListener("DOMContentLoaded", function() {
             var video = document.getElementById("gameoverVideo");
             var restartButton = document.getElementById("restartButton");
-    
-            // Try to play video immediately (some browsers might block it)
-            video.play().catch(function () {
-                // If autoplay fails, wait for the first interaction
-                document.addEventListener("click", function () {
-                    video.muted = false; // Unmute after interaction
-                    video.play();
-                }, { once: true }); // Ensures it runs only once
-            });
-    
+
+            // Function to handle video play
+            function playVideo() {
+                video.play().catch(function(error) {
+                    console.error("Autoplay failed:", error);
+                });
+            }
+
+            // Attempt to play on page load
+            playVideo();
+
+            // If it's still paused, try again on user interaction (e.g., mousemove)
+            if (video.paused) {
+                document.addEventListener('mousemove', function() {
+                    playVideo();
+                }, {
+                    once: true
+                });
+            }
+
             // When video ends, show the restart button
-            video.onended = function () {
+            video.onended = function() {
                 restartButton.style.display = "block";
             };
         });
-    
+
         // Function to restart the game
         function restartGame() {
             window.location.href = "index.html";
         }
     </script>
-    
-    
-    
+
     <hr>
     <footer class="HBC-footer">
         <div class="footer-container">
-            <!-- Left Section: About the Game -->
             <div class="footer-about">
                 <h3>About HBC</h3>
-                <p>Hum Banayenge Crorepati is a fun quiz game where you don't require knowledge to acheive excelence! Play and challenge your friends, and become the ultimate champion.</p>
+                <p>Hum Banayenge Crorepati is a fun quiz game where you don't require knowledge to achieve excellence! Play and challenge your friends, and become the ultimate champion.</p>
             </div>
-    
-            <!-- Middle Section: Quick Links -->
+
             <div class="footer-links">
                 <h3>Quick Links</h3>
                 <ul>
@@ -87,12 +91,11 @@
                     <li><a href="rules.html" target="_blank">⚖️ Rules</a></li>
                 </ul>
             </div>
-    
-            <!-- Right Section: Contact & Social Media -->
+
             <div class="footer-contact">
                 <h3>Contact Us</h3>
-                <p>📍 Location: Malad,India</p>
-                <p>📧 Email: <a class="mail"href="mailto:fungame.hbc@gmail.com">fungame.hbc@gmail.com</a></p>
+                <p>📍 Location: Malad, India</p>
+                <p>📧 Email: <a class="mail" href="mailto:fungame.hbc@gmail.com">fungame.hbc@gmail.com</a></p>
                 <p>📞 Phone: +91 95652 07725</p>
                 <br>
                 <h3>Follow Us</h3>
@@ -112,8 +115,7 @@
                 </div>
             </div>
         </div>
-    
-        <!-- Bottom Section -->
+
         <div class="footer-bottom">
             <p>© 2025 HBC Official Website | Presented by Suraj and Arpit | All Rights Reserved.</p>
             <p>Made with ❤️ for Marks</p>
@@ -121,4 +123,5 @@
     </footer>
 
 </body>
+
 </html>
