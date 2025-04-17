@@ -6,7 +6,7 @@ const prizes = [
 
 // Correct answers for each question
 const questions = [
-    { question: "Who discovered the concept of zero in mathematics?", correct: "C", nextPage: "Quit.html" }
+    { question: "Who discovered the concept of zero in mathematics?", correct: "D", nextPage: "Quit.html" }
 ];
 
 let currentQuestion = prizes.length - 16; // Start at ₹1,000 (last index)
